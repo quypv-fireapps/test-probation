@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white shadow-sm rounded-lg mt-4 p-4">
-    <h5 class="text-secondary">Add Variants if this product comes in multiple verions</h5>
+    <h6 class="text-secondary">Add Variants if this product comes in multiple verions</h6>
 
     <div class="d-flex pt-4 align-items-center" v-for="(item, i) in options" :key="i">
       <div class="w-25">
@@ -24,7 +24,7 @@
     </div>
 
     <div class="mt-4" v-if="variants && variants.length > 0">
-      <h6>
+      <h6 class="text-secondary">
         Modify the variants to be created
       </h6>
     </div>
@@ -51,7 +51,8 @@
       <!--  -->
       <div class="d-flex mt-3 align-items-center" v-for="item in variants" :key="item.value">
         <div class="d-flex align-items-center" style="width: 40px;">
-          <input type="checkbox" :value="item" v-model="selectedVariants" />
+          <!-- <input type="checkbox" :value="item" v-model="selectedVariants" /> -->
+          <v-checkbox :val="item" v-model="selectedVariants" />
         </div>
 
         <div class="pr-4 w-25">

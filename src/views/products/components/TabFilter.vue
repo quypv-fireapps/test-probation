@@ -64,7 +64,7 @@ export default {
       height: 2px;
       left: 20px;
       bottom: -2px;
-      background-color: #47549f;
+      background-color: #007bff;
     }
   }
 }

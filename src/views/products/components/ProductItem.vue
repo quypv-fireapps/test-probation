@@ -1,19 +1,17 @@
 <template>
   <tr class="product-row">
-    <td>
-      <input type="checkbox" v-model="checked" />
+    <td class="align-middle">
+      <v-checkbox :val="productInfo.id" v-model="checked" />
     </td>
 
     <td>
-      <div class="d-flex align-items-center">
-        <img class="product-thumbnail mr-3" :src="productInfo.thumbnail" :alt="productInfo.name" />
-        {{ productInfo.name }}
-      </div>
+      <img class="product-thumbnail mr-3" :src="productInfo.thumbnail" :alt="productInfo.name" />
+      {{ productInfo.name }}
     </td>
 
-    <td>Accessories</td>
-    <td>$30</td>
-    <td>
+    <td class="align-middle">Accessories</td>
+    <td class="align-middle">$30</td>
+    <td class="align-middle">
       <strong>150 in stocks</strong>
       <p class="mb-0">
         For 50 variants
@@ -54,8 +52,8 @@ export default {
 .product-row {
   .product-thumbnail {
     border-radius: 5px;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   }

@@ -189,6 +189,7 @@ export default {
       try {
         this.product.status = status
 
+        console.log(this.product)
         await this.addProduct(this.product)
         this.$router.push('/products')
       } catch (e) {
